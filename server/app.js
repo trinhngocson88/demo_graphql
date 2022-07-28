@@ -27,7 +27,7 @@ const connectDB = async () => {
 
 connectDB()
 
-async function startApolloServer(typeDefs, resolvers) {
+const startApolloServer = async(typeDefs, resolvers) => {
   const app = express();
   const httpServer = http.createServer(app);
   const server = new ApolloServer({
